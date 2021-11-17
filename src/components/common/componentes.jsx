@@ -1,7 +1,12 @@
+import { Button } from "@mui/material";
 
 
 export function Componente (){
     return (
-     <div>Bienvenidos</div>
+     <div>
+        <p>Bienvenidos a la App React</p>
+        <Button variant="contained">Inicio</Button>
+     </div>
+     
     );
 }
