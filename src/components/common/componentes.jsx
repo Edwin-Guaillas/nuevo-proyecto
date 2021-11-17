@@ -2,6 +2,10 @@
 
 export function Componente (){
     return (
-     <div>Bienvenidos</div>
+     <div>
+        <p>Bienvenidos a la App React</p>
+        <button>Iniciar</button>
+     </div>
+     
     );
 }
