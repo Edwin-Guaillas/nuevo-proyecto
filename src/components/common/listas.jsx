@@ -11,37 +11,37 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 
 
 const Listas = () => {
-    return(
+    return (
         <div >
-            <List component ='nav' >
+            <List component='nav' >
                 <ListItemButton className="list">
                     <ListItemIcon>
-                       <InboxIcon/>
+                        <InboxIcon />
                     </ListItemIcon>
-                    <ListItemText primary= 'Fotos'/>
+                    <ListItemText primary='Fotos' />
                 </ListItemButton>
 
                 <ListItemButton>
                     <ListItemIcon>
-                       <DraftsIcon/>
+                        <DraftsIcon />
                     </ListItemIcon>
-                    <ListItemText primary= 'Correos'/>
+                    <ListItemText primary='Correos' />
                 </ListItemButton>
-                
-                <Divider/>
+
+                <Divider />
 
                 <ListItemButton>
                     <ListItemIcon>
-                       < AutoDeleteIcon/>
+                        < AutoDeleteIcon />
                     </ListItemIcon>
-                    <ListItemText primary= 'Papeleria'/>
+                    <ListItemText primary='Papeleria' />
                 </ListItemButton>
 
                 <ListItemButton>
                     <ListItemIcon>
-                       <AccountCircleIcon/>
+                        <AccountCircleIcon />
                     </ListItemIcon>
-                    <ListItemText primary= 'Mis Contactos'/>
+                    <ListItemText primary='Mis Contactos' />
                 </ListItemButton>
             </List>
         </div>
