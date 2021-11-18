@@ -1,14 +1,23 @@
 import React from 'react';
 import './App.css';
-import { Componente } from './components/common/componentes';
+import {ThemeProvider } from "@mui/material";
+import theme from './consts/temaConfig';
+import Componente from './components/common/Drawer';
+
+
+
+
 
 
 
 function App() {
   return (
-    <div >
-      <Componente/>
-    </div>
+    <ThemeProvider theme={theme}> 
+
+    <Componente/>
+    
+    </ThemeProvider>
+    
   );
 }
 
