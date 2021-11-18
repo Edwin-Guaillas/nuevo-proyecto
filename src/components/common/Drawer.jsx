@@ -50,7 +50,6 @@ const AppBar = styled(MuiAppBar, {
     }),
   }),
 }));
-
 const DrawerHeader = styled('div')(({ theme }) => ({
   display: 'flex',
   alignItems: 'center',
@@ -59,85 +58,73 @@ const DrawerHeader = styled('div')(({ theme }) => ({
   ...theme.mixins.toolbar,
   justifyContent: 'flex-end',
 }));
+export default function Componente() {
+  const theme = useTheme();
+  const [open, setOpen] = React.useState(false);
 
-
-export default function Componente (){
-    const theme = useTheme();
-    const [open, setOpen] = React.useState(false);
-  
-    const handleDrawerOpen = () => {
-      setOpen(true);
-    };
-  
-    const handleDrawerClose = () => {
-      setOpen(false);
-    };
-    return (
-
-
-        <Box sx={{ display: 'flex' }}>
-        <CssBaseline />
-        <AppBar position="fixed" open={open}>
-          <Toolbar>
-            <IconButton
-              color="inherit"
-              aria-label="open drawer"
-              onClick={handleDrawerOpen}
-              edge="start"
-              sx={{ mr: 2, ...(open && { display: 'none' }) }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography variant="h6" noWrap component="div">
-              Menu
-            </Typography>
-          </Toolbar>
-        </AppBar>
-        
-        <Drawer
-          sx={{
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
+  return (
+    <Box sx={{ display: 'flex' }}>
+      <CssBaseline />
+      <AppBar position="fixed" open={open}>
+        <Toolbar>
+          <IconButton
+            color="inherit"
+            aria-label="open drawer"
+            onClick={handleDrawerOpen}
+            edge="start"
+            sx={{ mr: 2, ...(open && { display: 'none' }) }}
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography variant="h6" noWrap component="div">
+            Menu
+          </Typography>
+        </Toolbar>
+      </AppBar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          '& .MuiDrawer-paper': {
             width: drawerWidth,
-            flexShrink: 0,
-            '& .MuiDrawer-paper': {
-              width: drawerWidth,
-              boxSizing: 'border-box',
-            },
-          }}
-          variant="persistent"
-          anchor="left"
-          open={open}
-        >
-          <DrawerHeader>
-            <IconButton onClick={handleDrawerClose}>
-            <Typography variant="h6" noWrap component="div" color ="primary">
+            boxSizing: 'border-box',
+          },
+        }}
+        variant="persistent"
+        anchor="left"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            <Typography variant="h6" noWrap component="div" color="primary">
               Regresar
             </Typography>
-              {theme.direction === 'inherit' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+            {theme.direction === 'inherit' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
 
-            </IconButton>
-          </DrawerHeader>
+          </IconButton>
+        </DrawerHeader>
 
-          <Divider />
- 
-         <Listas/>
-          
+        <Divider />
 
-        </Drawer>
+        <Listas />
+      </Drawer>
+      <Main open={open}>
+        <DrawerHeader />
+        <Typography paragraph>
+          <p>Descripcion:</p>
+          Una aplicación es un programa informático diseñado como una herramienta para realizar operaciones o
+          funciones específicas.
+          Además, existen cientos de empresas dedicadas a crear aplicaciones y venderlas en forma de paquete,
+          también conocido como suites, como por ejemplo Microsoft Office o Adobe CS.
+        </Typography>
 
-
-        <Main open={open}>
-          <DrawerHeader />
-          <Typography paragraph>
-           <p>Descripcion:</p>
-           Una aplicación es un programa informático diseñado como una herramienta para realizar operaciones o 
-           funciones específicas.
-            Además, existen cientos de empresas dedicadas a crear aplicaciones y venderlas en forma de paquete, 
-            también conocido como suites, como por ejemplo Microsoft Office o Adobe CS.
-
-          </Typography>
-          
-        </Main>
-      </Box>
-     
-    );
+      </Main>
+    </Box>
+  );
 }
