@@ -12,6 +12,8 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Listas from './listas';
+import Api from '../hooks/api';
+
 
 const drawerWidth = 240;
 
@@ -116,13 +118,7 @@ export default function Componente() {
       </Drawer>
       <Main open={open}>
         <DrawerHeader />
-        <Typography paragraph>
-          <p>Descripcion:</p>
-          Una aplicación es un programa informático diseñado como una herramienta para realizar operaciones o
-          funciones específicas.
-          Además, existen cientos de empresas dedicadas a crear aplicaciones y venderlas en forma de paquete,
-          también conocido como suites, como por ejemplo Microsoft Office o Adobe CS.
-        </Typography>
+        <Api />
 
       </Main>
     </Box>
