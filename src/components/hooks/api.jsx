@@ -23,8 +23,8 @@ const Api = () => {
     }, []);
 
     return (
-        <div className='App'>
 
+        <div className='App'>
             {!todos ? 'Cargando...' :
                 todos.map((todo, index) => {
                     return <Card sx={{ maxWidth: 345 }}>
@@ -47,13 +47,10 @@ const Api = () => {
                             <Button size="small">Compartir</Button>
                         </CardActions>
                     </Card>
-
                 })
-
             }
-
-
         </div>
+
 
     );
 };

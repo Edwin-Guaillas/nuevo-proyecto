@@ -12,7 +12,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import Listas from './listas';
-import Api from '../hooks/api';
+import Cards from './cards';
 
 
 const drawerWidth = 240;
@@ -71,56 +71,58 @@ export default function Componente() {
     setOpen(false);
   };
   return (
-    <Box sx={{ display: 'flex' }}>
-      <CssBaseline />
-      <AppBar position="fixed" open={open}>
-        <Toolbar>
-          <IconButton
-            color="inherit"
-            aria-label="open drawer"
-            onClick={handleDrawerOpen}
-            edge="start"
-            sx={{ mr: 2, ...(open && { display: 'none' }) }}
-          >
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" noWrap component="div">
-            Menu
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <Drawer
-        sx={{
-          width: drawerWidth,
-          flexShrink: 0,
-          '& .MuiDrawer-paper': {
-            width: drawerWidth,
-            boxSizing: 'border-box',
-          },
-        }}
-        variant="persistent"
-        anchor="left"
-        open={open}
-      >
-        <DrawerHeader>
-          <IconButton onClick={handleDrawerClose}>
-            <Typography variant="h6" noWrap component="div" color="primary">
-              Regresar
+    <div>
+      <Box sx={{ display: 'flex' }}>
+        <CssBaseline />
+        {/*Navbar*/}
+        <AppBar position="fixed" open={open}>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              onClick={handleDrawerOpen}
+              edge="start"
+              sx={{ mr: 2, ...(open && { display: 'none' }) }}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Typography variant="h6" noWrap component="div">
+              Albums
             </Typography>
-            {theme.direction === 'inherit' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+          </Toolbar>
+        </AppBar>
+        {/*----------Draver o cajon--------------*/}
+        <Drawer
+          sx={{
+            width: drawerWidth,
+            flexShrink: 0,
+            '& .MuiDrawer-paper': {
+              width: drawerWidth,
+              boxSizing: 'border-box',
+            },
+          }}
+          variant="persistent"
+          anchor="left"
+          open={open}
+        >
+          <DrawerHeader>
+            <IconButton onClick={handleDrawerClose}>
+              {theme.direction === 'inherit' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
 
-          </IconButton>
-        </DrawerHeader>
+            </IconButton>
+          </DrawerHeader>
 
-        <Divider />
+          <Divider />
 
-        <Listas />
-      </Drawer>
-      <Main open={open}>
-        <DrawerHeader />
-        <Api />
+          <Listas />
+        </Drawer>
 
-      </Main>
-    </Box>
+        <Main open={open}>
+          <DrawerHeader />
+          <Cards />
+
+        </Main>
+      </Box>
+    </div>
   );
 }

@@ -4,47 +4,49 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import InboxIcon from '@mui/icons-material/Inbox';
+import FacebookIcon from '@mui/icons-material/Facebook';
 import DraftsIcon from '@mui/icons-material/Drafts';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
-import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-
+import YouTubeIcon from '@mui/icons-material/YouTube';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 
 const Listas = () => {
     return (
         <div >
             <List component='nav' >
-                <ListItemButton className="list">
-                    <ListItemIcon>
-                        <InboxIcon />
+                <ListItemButton >
+                    <ListItemIcon >
+                        <FacebookIcon color="info" />
                     </ListItemIcon>
-                    <ListItemText primary='Fotos' />
+                    <ListItemText primary='Facebook' />
+                    <ArrowRightIcon />
                 </ListItemButton>
 
                 <ListItemButton>
                     <ListItemIcon>
-                        <DraftsIcon />
+                        <YouTubeIcon color="error" />
                     </ListItemIcon>
-                    <ListItemText primary='Correos' />
+                    <ListItemText primary='Youtobe' />
+                    <ArrowRightIcon />
                 </ListItemButton>
-
+                <ListItemButton>
+                    <ListItemIcon>
+                        <DraftsIcon color="warning" />
+                    </ListItemIcon>
+                    <ListItemText primary='Correo' />
+                    <ArrowRightIcon />
+                </ListItemButton>
                 <Divider />
-
                 <ListItemButton>
                     <ListItemIcon>
                         < AutoDeleteIcon />
                     </ListItemIcon>
                     <ListItemText primary='Papeleria' />
-                </ListItemButton>
-
-                <ListItemButton>
-                    <ListItemIcon>
-                        <AccountCircleIcon />
-                    </ListItemIcon>
-                    <ListItemText primary='Mis Contactos' />
+                    <ArrowRightIcon />
                 </ListItemButton>
             </List>
         </div>
     )
 }
+
 export default Listas;
