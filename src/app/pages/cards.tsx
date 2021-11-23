@@ -1,6 +1,6 @@
 import { Grid } from "@mui/material";
 import { Box } from "@mui/system";
-import MediaCards from "../Cards/MediaCards";
+import MediaCards from "./MediaCards";
 
 
 const mediaCards = [{
