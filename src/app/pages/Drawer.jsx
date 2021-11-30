@@ -126,4 +126,3 @@ export default function Componente() {
     </div>
   );
 }
-export default Componente;
