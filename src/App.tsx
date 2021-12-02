@@ -1,14 +1,22 @@
-import { Typography } from '@mui/material';
 import Componente from './app/pages/Drawer';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
 import LoginPrincipal from './app/views/auth/login/LoginApp';
 
 
 
 function App() {
   return (
-    <Typography>
-      <Componente />
-    </Typography>
+
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Componente />}></Route>
+        <Route path="/login" element={<LoginPrincipal />}></Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
