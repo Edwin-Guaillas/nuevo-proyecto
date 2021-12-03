@@ -1,13 +1,12 @@
 import { Typography } from '@mui/material';
-import Componente from './app/pages/Drawer';
-
+import CardModal from './app/pages/CardModal';
 
 
 
 function App() {
   return (
     <Typography>
-      <Componente />
+      <CardModal />
     </Typography>
   );
 }
