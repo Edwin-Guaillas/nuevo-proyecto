@@ -9,6 +9,7 @@ const Theme = createTheme({
     }
 
 })
+export default theme;
 
 
 
