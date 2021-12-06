@@ -1,10 +1,13 @@
 import { useState } from 'react';
-import { Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from '@material-ui/core';
-import { makeStyles } from '@material-ui/core/styles';
+import { Grid, Container, Paper, Avatar, Typography, TextField, Button, CssBaseline } from '@mui/material';
 import LockIcon from '@mui/icons-material/Lock';
+import { makeStyles } from '@material-ui/core';
 
 
-const useStyles = makeStyles(theme => ({
+
+
+
+const useStyles = makeStyles((theme: any) => ({
     container: {
         opacity: '0.8',
         height: '60%',
@@ -36,10 +39,11 @@ const useStyles = makeStyles(theme => ({
 
 const LoginPrincipal = () => {
     const [body, setBody] = useState({ usuario: '', password: '' })
-    const classes = useStyles()
+    //@ts-ignore
+    const classes = useStyles();
 
 
-    const handleChange = e => {
+    const handleChange = (e: any) => {
         setBody({
             ...body,
             [e.target.name]: e.target.value
@@ -51,7 +55,7 @@ const LoginPrincipal = () => {
     }
 
     return (
-        <Grid container component='main' className={classes.root}>
+        <Grid container component='main' >
             <CssBaseline />
             <Container component={Paper} elevation={5} maxWidth='xs' className={classes.container}>
                 <div className={classes.div}>

@@ -7,7 +7,7 @@ import LoginPrincipal from './app/views/auth/login/LoginApp';
 function App() {
   return (
     <Typography>
-      <Componente />
+      <LoginPrincipal />
     </Typography>
   );
 }
