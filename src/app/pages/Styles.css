@@ -18,7 +18,9 @@
     margin: 0%;
     padding: 0%;
 }
-
+.colorMargen{
+    background-color: floralwhite;
+}
 .addCards{
     width: 345px;
     height: 300px;
