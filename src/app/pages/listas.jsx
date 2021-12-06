@@ -1,42 +1,31 @@
-
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import './Styles.css';
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 
 
 const Listas = () => {
     return (
         <div >
-            <List component='nav' className="listas">
-                <ListItemButton>
-                    <ListItemIcon >
-                        <FacebookIcon color="info" />
-                    </ListItemIcon>
-                    <ListItemText className="texto" primary='Facebook' />
-                    <ArrowRightIcon />
-                </ListItemButton>
+            <List component='nav' >
                 <ListItemButton>
                     <ListItemIcon>
-                        <YouTubeIcon color="error" />
+                        <BedtimeIcon color='disabled' />
                     </ListItemIcon>
-                    <ListItemText className="texto" primary='Youtobe' />
+                    <ListItemText primary='Tema' />
                     <ArrowRightIcon />
                 </ListItemButton>
                 <Divider />
 
                 <ListItemButton>
                     <ListItemIcon>
-                        < AutoDeleteIcon />
+                        <AutoAwesomeMotionIcon />
                     </ListItemIcon>
-                    <ListItemText className="texto" primary='Papeleria' />
+                    <ListItemText primary='Recuerdos' />
                     <ArrowRightIcon />
                 </ListItemButton>
                 <ListItemButton>
@@ -46,9 +35,9 @@ const Listas = () => {
                     <ListItemText className="texto" primary='Tema' />
                     <ArrowRightIcon />
                 </ListItemButton>
+
             </List>
         </div>
     )
 }
-
 export default Listas;
