@@ -5,43 +5,45 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import FacebookIcon from '@mui/icons-material/Facebook';
-import DraftsIcon from '@mui/icons-material/Drafts';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import './Styles.css';
+import BedtimeIcon from '@mui/icons-material/Bedtime';
+
 
 const Listas = () => {
     return (
         <div >
-            <List component='nav' >
-                <ListItemButton >
+            <List component='nav' className="listas">
+                <ListItemButton>
                     <ListItemIcon >
                         <FacebookIcon color="info" />
                     </ListItemIcon>
-                    <ListItemText primary='Facebook' />
+                    <ListItemText className="texto" primary='Facebook' />
                     <ArrowRightIcon />
                 </ListItemButton>
-
                 <ListItemButton>
                     <ListItemIcon>
                         <YouTubeIcon color="error" />
                     </ListItemIcon>
-                    <ListItemText primary='Youtobe' />
-                    <ArrowRightIcon />
-                </ListItemButton>
-                <ListItemButton>
-                    <ListItemIcon>
-                        <DraftsIcon color="warning" />
-                    </ListItemIcon>
-                    <ListItemText primary='Correo' />
+                    <ListItemText className="texto" primary='Youtobe' />
                     <ArrowRightIcon />
                 </ListItemButton>
                 <Divider />
+
                 <ListItemButton>
                     <ListItemIcon>
                         < AutoDeleteIcon />
                     </ListItemIcon>
-                    <ListItemText primary='Papeleria' />
+                    <ListItemText className="texto" primary='Papeleria' />
+                    <ArrowRightIcon />
+                </ListItemButton>
+                <ListItemButton>
+                    <ListItemIcon>
+                        <BedtimeIcon color='disabled' />
+                    </ListItemIcon>
+                    <ListItemText className="texto" primary='Tema' />
                     <ArrowRightIcon />
                 </ListItemButton>
             </List>
