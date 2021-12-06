@@ -1,29 +1,27 @@
-.listas{
-    justify-content: center;
-    align-items: center;
-    }
-.texto{
-    text-align:justify;  
-    cursor: pointer;
-    color: black;
+.listas {
+  justify-content: center;
+  align-items: center;
+}
+.texto {
+  text-align: justify;
+  cursor: pointer;
+  color: black;
 }
 .texto:focus {
-  outline-color: #61DAFA;
+  outline-color: #61dafa;
 }
 
-
-
-.colorEncabezado{
-    background-color: darkmagenta;
-    margin: 0%;
-    padding: 0%;
+.colorEncabezado {
+  background-color: darkmagenta;
+  margin: 0%;
+  padding: 0%;
 }
-.colorMargen{
-    background-color: floralwhite;
+.colorMargen {
+  background-color: floralwhite;
 }
-.addCards{
-    width: 345px;
-    height: 300px;
+.addCards {
+  width: 345px;
+  height: 300px;
 }
 .botonAdd {
   background-color: #610d48;
@@ -36,7 +34,7 @@
   bottom: 24px;
   right: 24px;
   font-weight: bold;
-  color: #FAFAFA;
+  color: #fafafa;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,9 +42,12 @@
   width: 50px;
 
   transform: rotate(1);
-  transition: .3s ease;
+  transition: 0.3s ease;
 }
 
 .botonAdd:hover {
   transform: rotate(224deg);
+}
+.fondoColor {
+  background: #fafafa;
 }
