@@ -4,51 +4,41 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
-import FacebookIcon from '@mui/icons-material/Facebook';
 import AutoDeleteIcon from '@mui/icons-material/AutoDelete';
-import YouTubeIcon from '@mui/icons-material/YouTube';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
-import './Styles.css';
+import AutoAwesomeMotionIcon from '@mui/icons-material/AutoAwesomeMotion';
 import BedtimeIcon from '@mui/icons-material/Bedtime';
 
 
 const Listas = () => {
     return (
         <div >
-            <List component='nav' className="listas">
-                <ListItemButton>
-                    <ListItemIcon >
-                        <FacebookIcon color="info" />
-                    </ListItemIcon>
-                    <ListItemText className="texto" primary='Facebook' />
-                    <ArrowRightIcon />
-                </ListItemButton>
-                <ListItemButton>
-                    <ListItemIcon>
-                        <YouTubeIcon color="error" />
-                    </ListItemIcon>
-                    <ListItemText className="texto" primary='Youtobe' />
-                    <ArrowRightIcon />
-                </ListItemButton>
-                <Divider />
-
-                <ListItemButton>
-                    <ListItemIcon>
-                        < AutoDeleteIcon />
-                    </ListItemIcon>
-                    <ListItemText className="texto" primary='Papeleria' />
-                    <ArrowRightIcon />
-                </ListItemButton>
+            <List component='nav' >
                 <ListItemButton>
                     <ListItemIcon>
                         <BedtimeIcon color='disabled' />
                     </ListItemIcon>
-                    <ListItemText className="texto" primary='Tema' />
+                    <ListItemText primary='Tema' />
+                    <ArrowRightIcon />
+                </ListItemButton>    
+                <ListItemButton>
+                    <ListItemIcon>
+                        <AutoAwesomeMotionIcon />
+                    </ListItemIcon>
+                    <ListItemText primary='Recuerdos' />
                     <ArrowRightIcon />
                 </ListItemButton>
+                <Divider />
+                <ListItemButton>
+                    <ListItemIcon>
+                        <AutoDeleteIcon color='error' />
+                    </ListItemIcon>
+                    <ListItemText className="texto" primary='Papeleria' />
+                    <ArrowRightIcon />
+                </ListItemButton>
+
             </List>
         </div>
     )
 }
-
 export default Listas;
