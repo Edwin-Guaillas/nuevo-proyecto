@@ -20,7 +20,7 @@ interface Props {
 export default function MediaCards({ image, title, description }: Props) {
 
     return (
-        <Card sx={{ maxWidth: 345 }}>
+        <Card sx={{ maxWidth: 293, height: 355 }}>
             <CardActionArea>
                 <CardMedia
                     component="img"
