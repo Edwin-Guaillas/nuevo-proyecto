@@ -1,0 +1,13 @@
+
+.avatar{
+    background: yellow;
+   align-items: center;
+}
+.caja{
+    color: lime;
+}
+.deals {
+  display: flex;        
+  flex-flow: row wrap; 
+  position: 20px 20px;
+}
