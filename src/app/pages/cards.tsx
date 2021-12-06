@@ -30,14 +30,8 @@ const mediaCards = [
 ];
 export default function Cards() {
     return (
-<<<<<<< HEAD
         <Box p={2}>
             <Grid container spacing={{ xs: 2, md: 4 }}>
-=======
-        <Box p={2} >
-            <Grid container spacing={{ xs: 2, md: 4 }} >
-
->>>>>>> 369b12d86dd49c11410639a04bfd0bf1c0ea8975
                 {mediaCards.map((mediaCards, i) => {
                     return (
                         <Grid key={i} item>
