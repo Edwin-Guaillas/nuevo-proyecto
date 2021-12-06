@@ -13,7 +13,6 @@ import Stack from '@mui/material/Stack';
 import AddPhotoAlternateIcon from '@mui/icons-material/AddPhotoAlternate';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import './Estilos.css';
 
 
 
