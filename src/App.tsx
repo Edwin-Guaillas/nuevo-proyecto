@@ -1,12 +1,12 @@
 import { Typography } from '@mui/material';
-import LoginPrincipal from './app/views/auth/login/LoginApp';
+import Componente from './app/pages/Drawer';
 
 
 
 function App() {
   return (
     <Typography>
-      < LoginPrincipal />
+      <Componente />
     </Typography>
   );
 }
