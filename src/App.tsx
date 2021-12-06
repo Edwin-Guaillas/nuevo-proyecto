@@ -4,7 +4,7 @@ import {
   Routes,
   Route
 } from "react-router-dom";
-import LoginPrincipal from './app/views/auth/login/LoginApp';
+import BasicModal from './app/pages/CardModal';
 
 
 
@@ -15,7 +15,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<Componente />}></Route>
-        <Route path="/login" element={<LoginPrincipal />}></Route>
+        <Route path="/modal" element={<BasicModal />}></Route>
       </Routes>
     </BrowserRouter>
   );
