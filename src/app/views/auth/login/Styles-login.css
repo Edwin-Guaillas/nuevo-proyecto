@@ -1,3 +1,6 @@
+body {
+  background-image: url(../../../assets/img/fondo.png);
+}
 .div {
   text-align: center;
 }
